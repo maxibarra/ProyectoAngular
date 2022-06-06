@@ -1,0 +1,49 @@
+
+.btn{
+  margin:20px;
+  height:3rem;
+  width:9rem;
+  border: 3px solid deepskyblue;
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+  position:relative;
+  cursor: pointer;
+  
+}
+.btn2{
+  margin:20px;
+  height:3rem;
+  width:9rem;
+  border: 3px solid red;
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+  position:relative;
+  cursor: pointer;
+}
+.btn::before,
+.btn::after{
+  content: "";
+  position:absolute;
+  width:20px;
+  height:20px;
+  border:inherit;
+  transition:0.5s ease;
+}
+
+.btn::before{
+  left: -15px;
+  top: -15px;
+  border-width: 3px 0 0 3px;
+}
+.btn::after{
+  right: -15px;
+  bottom:-15px;
+  border-width: 0 3px 3px 0;
+}
+.btn:hover::after,
+.btn:hover::before{
+  width:calc(100% + 30px);
+  height:calc(100% + 30px);
+}
