@@ -5,7 +5,7 @@
     <td>nombre</td>
     <td>nota</td>
   </tr>
-  <tr  style="border: 1px solid" *ngFor="let alumno of alumnos" [ngClass]=" alumno.nota < 7 ? 'desaprobado' : 'aprobado'">
+  <tr  *ngFor="let alumno of alumnos" [ngClass]=" alumno.nota < 7 ? 'desaprobado' : 'aprobado'">
     <td>
       {{alumno.nombre}}
     </td>
