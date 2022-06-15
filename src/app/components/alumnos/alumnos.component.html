@@ -1,0 +1,17 @@
+
+<table>
+  <th>Tabla De estudiantes</th>
+  <tr>
+    <td>nombre</td>
+    <td>nota</td>
+  </tr>
+  <tr  *ngFor="let alumno of alumnos" [ngClass]=" nota <= 7 ? 'desaprobado' : 'aprobado'">
+    <td>
+      {{alumno.nombre}}
+    </td>
+    <td >
+      {{alumno.nota}}
+    </td>
+  </tr>
+  
+</table>
