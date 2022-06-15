@@ -7,16 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./alumnos.component.css']
 })
 export class AlumnosComponent implements OnInit {
+
   
   public alumnos=[
-     {nombre:"alex", nota:"1"},
-     {nombre:"Exequiel", nota:"9"},
-     {nombre:"Benicio", nota:"7"},
-     {nombre:"Belen", nota:"9"},
-     {nombre:"Maxi", nota:"2"}
+     {nombre:"alex", nota:1},
+     {nombre:"Exequiel", nota:9},
+     {nombre:"Benicio", nota:7},
+     {nombre:"Belen", nota:9},
+     {nombre:"Maxi", nota:2}
   ];
-  constructor() {
-  }  
+  constructor() {}   
    
   ngOnInit(): void {
   }
