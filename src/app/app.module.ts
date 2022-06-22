@@ -7,6 +7,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { MainComponent } from './components/main/main.component';
 import { AlumnosComponent } from './components/alumnos/alumnos.component';
+import { FormularioLoginComponent } from './components/formulario-login/formulario-login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,15 @@ import { AlumnosComponent } from './components/alumnos/alumnos.component';
     NavComponent,
     AsideComponent,
     MainComponent,
-    AlumnosComponent
+    AlumnosComponent,
+    FormularioLoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

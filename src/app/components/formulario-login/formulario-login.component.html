@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="center form-group">
+    <h1>Login</h1>
+    <form [formGroup]="formularioPersona" (ngSubmit)="null">
+      <div class=" txt_field">      
+        <input type="text" class="form-control" formControlName="nombre">
+        <span></span>
+        <label>UserName <span style="color:red"
+          *ngIf="formularioPersona.get('nombre')?.errors?.['required']">
+         *</span> 
+         <span class="text-danger" style="font-size:19px; color:red;"
+         *ngIf="formularioPersona.get('nombre')?.errors?.['minlength']">   Numero
+         minimo de
+         caracteres es
+         6</span> </label>
+      
+      </div>
+      <div class="txt_field">
+        <input type="password" class="form-control" formControlName="password">   
+        <span></span>
+        <label for="Password">Password<span style="color:red"
+          *ngIf="formularioPersona.get('password')?.errors?.['required']">
+         *</span> 
+         <span class="text-danger" style="font-size:19px; color:red;"
+         *ngIf="formularioPersona.get('password')?.errors?.['minlength']">   minimo de 8 caracteres</span>
+      </label>
+       
+      </div> 
+      <p class="camposObligatorios"> * campos Obligatorios </p>
+
+      <div class="pass">Olvidaste la password?</div>
+
+      <input name="submit" type="submit" value="Login" [disabled]="formularioPersona.invalid" (click)="mostrarFormulario()">
+
+      <div class="signup_link">
+        No sos Miembro ? <a href="#">Registrarse</a>
+      </div>
+    </form>
+  </div>
+</div>
